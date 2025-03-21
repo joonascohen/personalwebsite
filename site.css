@@ -19,3 +19,11 @@ a {
     margin: 10px 0;
     font-size: 1.2em;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    text-align: center;
+}
