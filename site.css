@@ -1,6 +1,6 @@
 html, body {
-    height: 100vh;
-    display: grid;
+    min-height: 100vh;
+    display: flex;
     place-items: center;
     text-align: center;
     margin: 0;
@@ -10,9 +10,8 @@ b, strong {
     font-size: 2em;
 }
 p {
-    display: table-cell;
-    vertical-align: middle;
     text-align: center;
+    margin: 0;
 }
 a {
     display: inline-block;
