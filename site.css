@@ -3,6 +3,7 @@ html, body {
     display: grid;
     place-items: center;
     text-align: center;
+    place-items: center;
     margin: 0;
     padding: 0;
 }
@@ -20,16 +21,9 @@ a {
     font-size: 1.2em;
 }
 .container {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     /* Full viewport height */
     text-align: center;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }
