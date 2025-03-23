@@ -21,10 +21,11 @@ a {
     font-size: 1.2em;
 }
 .container {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    /* Full viewport height */
+    width: 100%;
+    overflow: hidden;
     text-align: center;
 }
 img {
