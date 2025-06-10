@@ -19,37 +19,37 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org86f65e0">Introduction</a></li>
-<li><a href="#orga728a33">How does it work?</a>
+<li><a href="#orgeded357">Introduction</a></li>
+<li><a href="#org03c6e1d">How does it work?</a>
 <ul>
-<li><a href="#org364c9b6">Organization</a></li>
-<li><a href="#orgef9209c">Transfer to the actual <code>config.el</code> file</a></li>
+<li><a href="#orgb5147d5">Organization</a></li>
+<li><a href="#org163ba06">Transfer to the actual <code>config.el</code> file</a></li>
 </ul>
 </li>
-<li><a href="#orge6dfe0e">Putting it all together</a></li>
+<li><a href="#orga0c0d66">Putting it all together</a></li>
 </ul>
 </div>
 </div>
 
-<div id="org58c85fe" class="figure">
+<div id="org809850a" class="figure">
 <p><img src="../assets/2025-06-04_12-41-34_screenshot.png" alt="2025-06-04_12-41-34_screenshot.png" />
 </p>
 </div>
-<div id="outline-container-org86f65e0" class="outline-2">
-<h2 id="org86f65e0">Introduction</h2>
-<div class="outline-text-2" id="text-org86f65e0">
+<div id="outline-container-orgeded357" class="outline-2">
+<h2 id="orgeded357">Introduction</h2>
+<div class="outline-text-2" id="text-orgeded357">
 <p>
 I first learned about the literate configuration through <a href="https://protesilaos.com/codelog/2023-12-18-emacs-org-advanced-literate-conf/">Protesilaos</a>, known for his themes like <code>ef-themes</code> and <code>modus</code>, and very helpful emacs tutorials on youtube. What the literate configuration does, is use <code>org-mode</code> as a medium to write the configuration to <code>config.el</code>. This is helpful because it allows you to write documentation in between the code blocks.
 </p>
 </div>
 </div>
-<div id="outline-container-orga728a33" class="outline-2">
-<h2 id="orga728a33">How does it work?</h2>
-<div class="outline-text-2" id="text-orga728a33">
+<div id="outline-container-org03c6e1d" class="outline-2">
+<h2 id="org03c6e1d">How does it work?</h2>
+<div class="outline-text-2" id="text-org03c6e1d">
 </div>
-<div id="outline-container-org364c9b6" class="outline-3">
-<h3 id="org364c9b6">Organization</h3>
-<div class="outline-text-3" id="text-org364c9b6">
+<div id="outline-container-orgb5147d5" class="outline-3">
+<h3 id="orgb5147d5">Organization</h3>
+<div class="outline-text-3" id="text-orgb5147d5">
 <p>
 The literate configuration takes advantage of <code>org-mode</code> heading to split up your configuration sections. You can see an example of this in my <a href="https://github.com/joonascohen/dot.files">dotfiles</a>. First you have to create a org file, mine is personally called <code>config.org</code>. I will show how the headings work and how I personally organize my <code>config.org</code> below:
 </p>
@@ -79,13 +79,13 @@ The literate configuration takes advantage of <code>org-mode</code> heading to s
 </div>
 </div>
 </div>
-<div id="outline-container-orgef9209c" class="outline-3">
-<h3 id="orgef9209c">Transfer to the actual <code>config.el</code> file</h3>
-<div class="outline-text-3" id="text-orgef9209c">
+<div id="outline-container-org163ba06" class="outline-3">
+<h3 id="org163ba06">Transfer to the actual <code>config.el</code> file</h3>
+<div class="outline-text-3" id="text-org163ba06">
 <p>
 The way this works, is that it uses <code>org-babel-tangle</code>. Once the command is executed it will push out the change to the file that you specify. All the code that you want in your <code>config.el</code> will go into code blocks, specified with the <code>emacs-lisp</code> language.
 </p>
-<pre class="example" id="org9117910">
+<pre class="example" id="orgabf37ec">
 #+begin_src emacs-lisp
 configuration code would go here
 #+end_src
@@ -94,7 +94,7 @@ configuration code would go here
 <p>
 If you want to have it on a per file basis, you can specfiy the file within the code block:
 </p>
-<pre class="example" id="orgcd923cc">
+<pre class="example" id="orgb746858">
 #+begin_src emacs-lisp :tangle /path/to/file
 configuration code would go here
 #+end_src
@@ -103,14 +103,14 @@ configuration code would go here
 <p>
 I personally have a file property that goes right under my title property to state that I want everything to be pushed to one file, instead of stating in each code block what file I want.
 </p>
-<pre class="example" id="orgfbba7be">
+<pre class="example" id="org19fba7e">
 #+PROPERTY: header-args :tangle /home/joonas/.config/doom/config.el
 </pre>
 
 <p>
 Now, for instance under my UI -&gt; theme tab, I have a code block to set my theme, for example:
 </p>
-<pre class="example" id="org253adce">
+<pre class="example" id="orge0a288d">
 #+begin_src emacs-lisp
 (setq doom-theme 'doom-gruvbox)
 #+end_src
@@ -126,13 +126,13 @@ Once you are ready to push your code, you have to run <code>org-babel-tangle</co
 </div>
 </div>
 </div>
-<div id="outline-container-orge6dfe0e" class="outline-2">
-<h2 id="orge6dfe0e">Putting it all together</h2>
-<div class="outline-text-2" id="text-orge6dfe0e">
+<div id="outline-container-orga0c0d66" class="outline-2">
+<h2 id="orga0c0d66">Putting it all together</h2>
+<div class="outline-text-2" id="text-orga0c0d66">
 <p>
 The advantage of this is that you can split up and organize your code, with comments to explain what is going on. For example, under my ORG -&gt; Emphasis Markers section, I have a note that describes what the setting is.
 </p>
-<pre class="example" id="org75644a1">
+<pre class="example" id="org6346bf2">
 * ORG
 ** Directory
 ** TODO Sequence
