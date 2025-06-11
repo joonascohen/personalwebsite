@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Joonas Cohen</title>
+    <link>https://joonasc.com</link>
+    <description>My personal website</description>
+    <item>
+      <title>2025-06-04 - Moving Emacs config.el to an org file</title>
+      <link>https://joonasc.com/blogs/posts/2025-06-04-movingemacs.html</link>
+      <description>Emacs Literate Configuration</description>
+      <pubDate>2025-06-04</pubDate>
+    </item>
+    <!-- More <item> tags for each post -->
+  </channel>
+</rss>
