@@ -7,9 +7,14 @@
     <item>
       <title>2025-06-04 - Moving Emacs config.el to an org file</title>
       <link>https://joonasc.com/blogs/posts/2025-06-04-movingemacs.html</link>
-      <description>Emacs Literate Configuration</description>
+      <description>A blog post about my Emacs literate configuration.</description>
       <pubDate>2025-06-04</pubDate>
     </item>
-    <!-- More <item> tags for each post -->
+    <item>
+      <title>2025-06-10 - Transition from Obisian to Emacs</title>
+      <link>https://joonasc.com/blogs/posts/2025-06-10-transitiontoemacs.html</link>
+      <description>A blog post about my Emacs literate configuration.</description>
+      <pubDate>2025-06-04</pubDate>
+    </item>
   </channel>
 </rss>
